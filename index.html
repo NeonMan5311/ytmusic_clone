@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Youtube Music</title>
+  <link rel="stylesheet" href="main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+  <div class="head">
+    <div class="expand">
+      <div class="line-img">
+        <img class="expand-image" src="images/iconmonstr-line-three-horizontal-lined-240.png" alt="home" title="home"
+          height="40px" width="40px">
+      </div>
+      <div class="main-page">
+        <div class="main-page-image">
+          <img class="yt-image" src="images/youtube-brands.svg" alt="home" title="home" height="20rem" width="20px">
+        </div>
+        <div class="main-page-text">Music</div>
+      </div>
+      <div class="search">
+        <div class="search-icon">
+          <img src="images/magnifying-glass-solid.svg" alt="home" title="home" height="20px" width="20px">
+        </div>
+        <input class="search-input " type="text" placeholder="Search songs,albums">
+      </div>
+
+    </div>
+    <div class="right-head">
+      <div class="profile">
+        <img src="images/icons8-user-40.png" alt="home" title="home" height="40px" width="40px">
+      </div>
+    </div>
+  </div>
+  <div class="main-container">
+    <div class="sidebar">
+      <div class="home" onclick="audio.pause();">
+        <div class="image">
+          <img class="home-image" src="images/icons8-home-material-rounded-310.png" alt="home" title="home"
+            height="40px" width="40px">
+        </div>
+        <div class="home-text">Home
+        </div>
+      </div>
+      <div class="explore">
+        <div class="image">
+          <img class="explore-image" src="images/compass.png" alt="home" title="home" height="40px" width="40px">
+        </div>
+        Explore
+      </div>
+      <div class="library">
+        <div class="image">
+          <img class="library-image" src="images/music-note.png" alt="home" title="home" height="40px" width="40px">
+        </div>
+        Library
+      </div>
+
+    </div>
+    <div class="main-body">
+      <div class="song-container">
+        <div class="song">
+          <div class="fade">
+            <div class="play-button-container"> <img class="play-icon" src="images/play-icon-ong-removebg-preview.png"
+                alt="icon" height="21px" width="18px">
+            </div>
+            <div class="three-dots">
+              <div class="dots"></div>
+              <div class="dots"></div>
+              <div class="dots"></div>
+            </div>
+            <img class="song-1-img" src="images/Falak-Tak-Reprised-Cover--Hindi-2021-20211217175159-500x500.jpg"
+              alt="home" title="home" height="150px" width="150px">
+          </div>
+          <div class="song-name">
+            Falak Tak Chal Sath
+          </div>
+          <div class="artist-name">
+            Udit Narayan
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="player hidden">
+    <div class="song-slider-container">
+      <input min="0" max="100" class="song-slider" value="0" type="range" onchange="songObject.sliderUp()">
+    </div>
+    <div class="list">
+      <div class="left-player">
+        <div class="control-wrapper">
+          <div class="backward">
+            <img src="images/controls/media-step-backward-24.png" height="20px" width="20px" alt="">
+          </div>
+          <div class="pause-play">
+            <div class="play hidden">
+              <svg class="play-svg" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                width="24px" fill="#e3e3e3">
+                <path d="M320-200v-560l440 280-440 280Z" />
+              </svg>
+            </div>
+            <div class="pause">
+              <svg class="pause-svg" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                width="40px" fill="#e3e3e3">
+                <path
+                  d="M592.56-240q-13.53 0-23.69-10.15-10.15-10.16-10.15-23.7v-412.3q0-13.54 10.15-23.7Q579.03-720 592.56-720h76.67q13.54 0 23.69 10.15 10.16 10.16 10.16 23.7v412.3q0 13.54-10.16 23.7Q682.77-240 669.23-240h-76.67Zm-301.79 0q-13.54 0-23.69-10.15-10.16-10.16-10.16-23.7v-412.3q0-13.54 10.16-23.7Q277.23-720 290.77-720h77.18q13.14 0 23.49 10.15 10.35 10.16 10.35 23.7v412.3q0 13.54-10.35 23.7Q381.09-240 367.95-240h-77.18Z" />
+              </svg>
+            </div>
+          </div>
+          <div class="forward">
+            <img src="images/controls/media-step-forward-24.png" height="20px" width="20px" alt="">
+          </div>
+        </div>
+        <div class="song-playtime">
+          <span class="currentDuration"></span>
+          <span class="trackDuration"></span>
+        </div>
+      </div>
+      <div class="drop-down">
+        <img class="drop-down-image" src="images/controls/play-24.png" alt="">
+      </div>
+
+    </div>
+    <div class="song-info">
+      <div class="song-info-image-name-container">
+        <div class="song-info-image-section">
+          <img class="song-info-image" src="" alt="">
+        </div>
+        <div class="song-info-name">
+
+        </div>
+      </div>
+      <div class="song-info-feedback">
+        <div class="song-info-like" class="liked" onclick="changeImage();">
+          <svg class="like-button unfill" xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960"
+            width="32px" fill="#ffffff">
+            <path
+              d="M709.23-140H313.08v-480l265.38-263.84L612.3-850q6.24 6.23 10.35 16.5 4.12 10.27 4.12 19.35V-804L584.3-620h243.39q28.54 0 50.42 21.89Q900-576.23 900-547.69v64.61q0 6.23-1.31 13.46t-3.92 13.47L780.15-185.69q-8.61 19.23-28.84 32.46T709.23-140ZM253.08-620v480H100v-480h153.08Z" />
+          </svg>
+        </div>
+        <div class="song-info-dislike disliked">
+          <svg class="dislike-button unfill" onclick="changeImageDislike();" xmlns="http://www.w3.org/2000/svg"
+            height="30px" viewBox="0 -960 960 960" width="30px" fill="#ffffff">
+            <path
+              d="M250.77-803.84h396.15v479.99L381.54-60 347.7-93.85q-6.24-6.23-10.35-16.5-4.12-10.27-4.12-19.34v-10.16l42.47-184H132.31q-28.54 0-50.42-21.88Q60-367.62 60-396.15v-64.62q0-6.23 1.31-13.46t3.92-13.46l114.62-270.46q8.61-19.23 28.84-32.46t42.08-13.23Zm456.15 479.99v-479.99H860v479.99H706.92Z" />
+          </svg>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <script src="song-info.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
